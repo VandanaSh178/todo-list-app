@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List App</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Stats Display -->
+        <div class="stats-container">
+            <div class="details">
+                <h1>Todo Done</h1>
+                <p>Keep it up!</p>
+                <div class="progressbar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <div class="stats-number">
+                <p id="numbers">0 / 0</p>
+            </div>
+        </div>
+
+        <!-- Task Input Form -->
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Write your task" />
+            
+            <!-- Priority Dropdown -->
+            <select id="prioritySelect">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+            </select>
+            
+            <button id="newTask" type="submit">+</button>
+        </form>
+
+
+        <!-- Task List -->
+        <ul class="task-list"></ul>
+
+        <!-- Filter + Theme Toggle Buttons -->
+        <div class="controls">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button id="toggleTheme">Toggle Theme</button>
+        </div>
+
+    </div>
+    
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
